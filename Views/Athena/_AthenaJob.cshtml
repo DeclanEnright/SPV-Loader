@@ -1,0 +1,186 @@
+﻿@model SPV_Loader.Models.AthenaViewModel
+
+@if (ViewBag.AllItemsProcessed)
+{
+    <form action="@Url.Action("Download")" method="post">
+        <button type="submit">Download List</button>
+    </form>
+}
+else
+{
+    using (Html.BeginForm("Save", "Athena", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            <input type="submit" value="Save and Next" />
+        </div>
+        <br />
+
+        <div class="jumbotron">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.AthenaDetails.Id)
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.JobNumber)
+                        @Html.EditorFor(model => model.AthenaDetails.JobNumber, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.JobNumber, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.DueDate)
+                        @Html.EditorFor(model => model.AthenaDetails.DueDate, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.DueDate, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.PurchaseOrderNumber)
+                        @Html.EditorFor(model => model.AthenaDetails.PurchaseOrderNumber, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.PurchaseOrderNumber, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.PurchaseOrderLine)
+                        @Html.EditorFor(model => model.AthenaDetails.PurchaseOrderLine, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.PurchaseOrderLine, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.SalesOrderNumber)
+                        @Html.EditorFor(model => model.AthenaDetails.SalesOrderNumber, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.SalesOrderNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.CustomerAccountCode)
+                        @Html.EditorFor(model => model.AthenaDetails.CustomerAccountCode, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.CustomerAccountCode, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.JobQuantity)
+                        @Html.EditorFor(model => model.AthenaDetails.JobQuantity, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.JobQuantity, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.AscmOrderId)
+                        @Html.EditorFor(model => model.AthenaDetails.AscmOrderId, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.AscmOrderId, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.EndCustomer)
+                        @Html.EditorFor(model => model.AthenaDetails.EndCustomer, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.EndCustomer, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.ActivationSystem)
+                        @Html.EditorFor(model => model.AthenaDetails.ActivationSystem, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.ActivationSystem, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.ProductType)
+                        @Html.EditorFor(model => model.AthenaDetails.ProductType, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.ProductType, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.ErpMaterialCode)
+                        @Html.EditorFor(model => model.AthenaDetails.ErpMaterialCode, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.ErpMaterialCode, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.IntegratorPartID)
+                        @Html.EditorFor(model => model.AthenaDetails.IntegratorPartID, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.IntegratorPartID, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.IntegratorID)
+                        @Html.EditorFor(model => model.AthenaDetails.IntegratorID, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.IntegratorID, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.ActivationType)
+                        @Html.EditorFor(model => model.AthenaDetails.ActivationType, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.ActivationType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.PartNumberSku)
+                        @Html.EditorFor(model => model.AthenaDetails.PartNumberSku, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.PartNumberSku, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.RetailBarcode)
+                        @Html.EditorFor(model => model.AthenaDetails.RetailBarcode, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.RetailBarcode, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.RetailBarcodeType)
+                        @Html.EditorFor(model => model.AthenaDetails.RetailBarcodeType, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.RetailBarcodeType, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.LabelFor(model => model.AthenaDetails.Channel)
+                        @Html.EditorFor(model => model.AthenaDetails.Channel, new { htmlAttributes = new { @class = "form-control custom-form-control" } })
+                        @Html.ValidationMessageFor(model => model.AthenaDetails.Channel, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <!-- Additional textboxes for the extra column can be added here -->
+                    <div class="form-group custom-form-group">
+                        @Html.Label("Additional Field 1")
+                        @Html.TextBox("AdditionalField1", null, new { @class = "form-control custom-form-control" })
+                    </div>
+
+                    <div class="form-group custom-form-group">
+                        @Html.Label("Additional Field 2")
+                        @Html.TextBox("AdditionalField2", null, new { @class = "form-control custom-form-control" })
+                    </div>
+
+                    <!-- Add more fields as necessary -->
+                </div>
+            </div>
+        </div>
+    }
+}
+
+
+<style>
+    .custom-form-group {
+        margin-bottom: 15px;
+    }
+
+    .custom-form-control {
+        width: 90%; /* Adjust the width to make the inputs narrower */
+        margin-right: 10px; /* Add space between adjacent text boxes */
+    }
+
+    .form-horizontal .col-md-2 {
+        padding-right: 10px; /* Add space between columns */
+    }
+</style>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

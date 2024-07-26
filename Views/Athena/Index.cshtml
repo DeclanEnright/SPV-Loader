@@ -1,0 +1,142 @@
+﻿@model SPV_Loader.Models.AthenaViewModel
+
+@{
+    ViewBag.Title = "Index";
+    bool isProcessingCompleted = ViewBag.AllItemsProcessed ?? false;
+    WebGrid grid = new WebGrid(Model.AthenaList, canPage: false);
+}
+
+<h2><strong>ATHENA</strong></h2>
+
+@if (!isProcessingCompleted)
+{
+    using (Html.BeginForm("ImportOrder", "ImportOrder", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <h4>Upload Order File</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="file" name="postedFile" />
+                    </td>
+                    <td>
+                        <input type="submit" id="btn_Upload" value="Upload" aria-label="Load" />
+                    </td>
+                    <td>
+                        @Html.ValidationSummary()
+                        @TempData["errorMessage"]
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+
+    <br />
+    <div class="webgrid-container">
+        <table class="table-responsive">
+            <tr>
+                <td>
+                    @grid.GetHtml(
+                    tableStyle: "webgrid-table",
+                    fillEmptyRows: false,
+                    headerStyle: "webgrid-header",
+                    alternatingRowStyle: "webgrid-alternating-row",
+                    selectedRowStyle: "select",
+                    footerStyle: "grid-footer",
+                    mode: WebGridPagerModes.All,
+                    firstText: "<< First",
+                    previousText: "< Prev",
+                    nextText: "Next >",
+                    lastText: "Last >>",
+                    columns: new[]
+                    {
+                        grid.Column("JobNumber", canSort: false),
+                        grid.Column("DueDate", canSort: false, style: "noWrap"),
+                        grid.Column("PurchaseOrderNumber", canSort: false),
+                        grid.Column("PurchaseOrderLine", canSort: false),
+                        grid.Column("SalesOrderNumber", canSort: false),
+                        grid.Column("CustomerAccountCode", canSort: false),
+                        grid.Column("JobQuantity", canSort: false),
+                        grid.Column("ASCMOrderId", canSort: false),
+                        grid.Column("EndCustomer", canSort: false),
+                        grid.Column("ActivationSystem", canSort: false),
+                        grid.Column("ProductType", canSort: false),
+                        grid.Column("ErpMaterialCode", canSort: false),
+                        grid.Column("IntegratorPartId", canSort: false),
+                        grid.Column("ActivationType", canSort: false),
+                        grid.Column("PartNumberSku", canSort: false, style: "noWrap"),
+                        grid.Column("RetailBarcode", canSort: false),
+                    })
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+}
+else
+{
+    <p>All items have been processed.</p>
+    <form action="@Url.Action("Download", "Athena")" method="post">
+    </form>
+}
+
+<hr />
+@Html.Partial("_AthenaJob", Model)
+
+<style type="text/css">
+    .noWrap {
+        width: 100px; /* Fixed width for the column */
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow text */
+        text-overflow: ellipsis; /* Show ellipsis when text overflows */
+    }
+
+    .webgrid-table {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        width: 100%;
+        display: table;
+        border-collapse: separate;
+        border: solid 1px #8a6d3b;
+        background-color: white;
+    }
+
+        .webgrid-table td, th {
+            border: 1px solid #8a6d3b;
+            padding: 3px 7px 2px;
+        }
+
+    .webgrid-header {
+        background-color: steelblue;
+        color: #FFFFFF;
+        padding-bottom: 4px;
+        padding-top: 5px;
+        text-align: left;
+    }
+
+        .webgrid-header a {
+            color: white
+        }
+
+    .webgrid-row-style {
+        padding: 3px 7px 2px;
+    }
+
+    .webgrid-alternating-row {
+        background-color: #e6e0da;
+        padding: 3px 7px 2px;
+    }
+
+     .webgrid-container {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent text from wrapping */
+        width: 100%; /* Ensure it fills the width of its container */
+    }
+
+</style>

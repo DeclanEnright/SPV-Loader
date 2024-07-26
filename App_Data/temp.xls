@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CrystalReport xmlns="urn:crystal-reports:schemas:report-detail"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:crystal-reports:schemas:report-detail http://www.businessobjects.com/products/xml/CR2008Schema.xsd">
+<Details Level="1">
+<Section SectionNumber="0">
+<Field Name="JobNumber" FieldName="{MainJobDetails.JobNo}"><FormattedValue>207825</FormattedValue><Value>207825</Value></Field>
+<Field Name="DueDate" FieldName="{MainJobDetails.RequiredTime}"><FormattedValue>04/04/2024  08:00:00</FormattedValue><Value>2024-04-04T08:00:00</Value></Field>
+<Field Name="PurchaseOrder" FieldName="{MainOrder.CustomerRef}"><FormattedValue>7000156329</FormattedValue><Value>7000156329</Value></Field>
+<Field Name="PurchaseOrderLine" FieldName="{@POLineNumber}"><FormattedValue>20</FormattedValue><Value>20</Value></Field>
+<Field Name="SalesOrder" FieldName="{MainOrder.OrderNo}"><FormattedValue>280546</FormattedValue><Value>280546</Value></Field>
+<Field Name="CustomerAccountCode" FieldName="{MainOrder.InvoiceCode}"><FormattedValue>1781</FormattedValue><Value>1781</Value></Field>
+<Field Name="BuildQty" FieldName="{@Build Qty}"><FormattedValue>13010</FormattedValue><Value>13010.00</Value></Field>
+<Field Name="ASCMOrderID" FieldName="{@OrderID}"><FormattedValue>23884</FormattedValue><Value>23884</Value></Field>
+<Field Name="EndCustomer" FieldName="{@Customer}"><FormattedValue>Microsoft</FormattedValue><Value>Microsoft</Value></Field>
+<Field Name="ActivationSystem" FieldName="{@ActivationSystem}"><FormattedValue>POSA</FormattedValue><Value>POSA</Value></Field>
+<Field Name="ProductType" FieldName="{@Product}"><FormattedValue>XBox M6</FormattedValue><Value>XBox M6</Value></Field>
+<Field Name="ERPMaterialCode" FieldName="{@ERPMaterialCode}"><FormattedValue>12965101</FormattedValue><Value>12965101</Value></Field>
+<Field Name="IntegratorPartID" FieldName="{@IntegratorPartID}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="IntegratorId" FieldName="{@IntegratorId}"><FormattedValue>InComm</FormattedValue><Value>InComm</Value></Field>
+<Field Name="ActivationType" FieldName="{@ActivationType}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="PartNumber" FieldName="{@ProductCode}"><FormattedValue>K4W-02099_23884</FormattedValue><Value>K4W-02099_23884</Value></Field>
+<Field Name="RetailBarcode" FieldName="{@RetailBarcode}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="RetailBarcodeType" FieldName="{@RetailBarcodeType}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="OCR" FieldName="{@OCR}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="Channel1" FieldName="{@Channel}"><FormattedValue>Indirect</FormattedValue><Value>Indirect</Value></Field>
+</Section>
+</Details>
+<Details Level="1">
+<Section SectionNumber="0">
+<Field Name="JobNumber" FieldName="{MainJobDetails.JobNo}"><FormattedValue>207826</FormattedValue><Value>207826</Value></Field>
+<Field Name="DueDate" FieldName="{MainJobDetails.RequiredTime}"><FormattedValue>04/04/2024  08:00:00</FormattedValue><Value>2024-04-04T08:00:00</Value></Field>
+<Field Name="PurchaseOrder" FieldName="{MainOrder.CustomerRef}"><FormattedValue>7000156329</FormattedValue><Value>7000156329</Value></Field>
+<Field Name="PurchaseOrderLine" FieldName="{@POLineNumber}"><FormattedValue>30</FormattedValue><Value>30</Value></Field>
+<Field Name="SalesOrder" FieldName="{MainOrder.OrderNo}"><FormattedValue>280546</FormattedValue><Value>280546</Value></Field>
+<Field Name="CustomerAccountCode" FieldName="{MainOrder.InvoiceCode}"><FormattedValue>1781</FormattedValue><Value>1781</Value></Field>
+<Field Name="BuildQty" FieldName="{@Build Qty}"><FormattedValue>13010</FormattedValue><Value>13010.00</Value></Field>
+<Field Name="ASCMOrderID" FieldName="{@OrderID}"><FormattedValue>23885</FormattedValue><Value>23885</Value></Field>
+<Field Name="EndCustomer" FieldName="{@Customer}"><FormattedValue>Microsoft</FormattedValue><Value>Microsoft</Value></Field>
+<Field Name="ActivationSystem" FieldName="{@ActivationSystem}"><FormattedValue>POSA</FormattedValue><Value>POSA</Value></Field>
+<Field Name="ProductType" FieldName="{@Product}"><FormattedValue>XBox M6</FormattedValue><Value>XBox M6</Value></Field>
+<Field Name="ERPMaterialCode" FieldName="{@ERPMaterialCode}"><FormattedValue>12965102</FormattedValue><Value>12965102</Value></Field>
+<Field Name="IntegratorPartID" FieldName="{@IntegratorPartID}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="IntegratorId" FieldName="{@IntegratorId}"><FormattedValue>InComm</FormattedValue><Value>InComm</Value></Field>
+<Field Name="ActivationType" FieldName="{@ActivationType}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="PartNumber" FieldName="{@ProductCode}"><FormattedValue>K4W-02100_23885</FormattedValue><Value>K4W-02100_23885</Value></Field>
+<Field Name="RetailBarcode" FieldName="{@RetailBarcode}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="RetailBarcodeType" FieldName="{@RetailBarcodeType}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="OCR" FieldName="{@OCR}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="Channel1" FieldName="{@Channel}"><FormattedValue>Indirect</FormattedValue><Value>Indirect</Value></Field>
+</Section>
+</Details>
+<Details Level="1">
+<Section SectionNumber="0">
+<Field Name="JobNumber" FieldName="{MainJobDetails.JobNo}"><FormattedValue>207824</FormattedValue><Value>207824</Value></Field>
+<Field Name="DueDate" FieldName="{MainJobDetails.RequiredTime}"><FormattedValue>04/04/2024  08:00:00</FormattedValue><Value>2024-04-04T08:00:00</Value></Field>
+<Field Name="PurchaseOrder" FieldName="{MainOrder.CustomerRef}"><FormattedValue>7000156329</FormattedValue><Value>7000156329</Value></Field>
+<Field Name="PurchaseOrderLine" FieldName="{@POLineNumber}"><FormattedValue>10</FormattedValue><Value>10</Value></Field>
+<Field Name="SalesOrder" FieldName="{MainOrder.OrderNo}"><FormattedValue>280546</FormattedValue><Value>280546</Value></Field>
+<Field Name="CustomerAccountCode" FieldName="{MainOrder.InvoiceCode}"><FormattedValue>1781</FormattedValue><Value>1781</Value></Field>
+<Field Name="BuildQty" FieldName="{@Build Qty}"><FormattedValue>13010</FormattedValue><Value>13010.00</Value></Field>
+<Field Name="ASCMOrderID" FieldName="{@OrderID}"><FormattedValue>23886</FormattedValue><Value>23886</Value></Field>
+<Field Name="EndCustomer" FieldName="{@Customer}"><FormattedValue>Microsoft</FormattedValue><Value>Microsoft</Value></Field>
+<Field Name="ActivationSystem" FieldName="{@ActivationSystem}"><FormattedValue>POSA</FormattedValue><Value>POSA</Value></Field>
+<Field Name="ProductType" FieldName="{@Product}"><FormattedValue>XBox M6</FormattedValue><Value>XBox M6</Value></Field>
+<Field Name="ERPMaterialCode" FieldName="{@ERPMaterialCode}"><FormattedValue>12965100</FormattedValue><Value>12965100</Value></Field>
+<Field Name="IntegratorPartID" FieldName="{@IntegratorPartID}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="IntegratorId" FieldName="{@IntegratorId}"><FormattedValue>InComm</FormattedValue><Value>InComm</Value></Field>
+<Field Name="ActivationType" FieldName="{@ActivationType}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="PartNumber" FieldName="{@ProductCode}"><FormattedValue>K4W-02097_23886</FormattedValue><Value>K4W-02097_23886</Value></Field>
+<Field Name="RetailBarcode" FieldName="{@RetailBarcode}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="RetailBarcodeType" FieldName="{@RetailBarcodeType}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="OCR" FieldName="{@OCR}"><FormattedValue></FormattedValue><Value></Value></Field>
+<Field Name="Channel1" FieldName="{@Channel}"><FormattedValue>Indirect</FormattedValue><Value>Indirect</Value></Field>
+</Section>
+</Details>
+</CrystalReport>
